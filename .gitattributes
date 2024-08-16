@@ -1,0 +1,4 @@
+exps_vf_nerf/point_to_center/embedding_0_feats.pth filter=lfs diff=lfs merge=lfs -text
+exps_vf_nerf/point_to_center/embedding.pth filter=lfs diff=lfs merge=lfs -text
+exps_vf_nerf/point_exterior/embedding.pth filter=lfs diff=lfs merge=lfs -text
+exps_vf_nerf/point_exterior/no_embedding.pth filter=lfs diff=lfs merge=lfs -text

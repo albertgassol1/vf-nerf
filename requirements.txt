@@ -1,0 +1,20 @@
+GPUtil==1.4.0
+imageio==2.32.0
+matplotlib==3.7.3
+numpy==1.24.4
+open3d==0.13.0
+opencv-python==4.8.1.78
+pandas==2.0.3
+Pillow==10.0.1
+plyfile==1.0.1
+pyrender==0.1.45
+scikit-image==0.21.0
+scikit-learn==1.3.1
+scipy==1.10.1
+tinycudann @ git+https://github.com/NVlabs/tiny-cuda-nn/@212104156403bd87616c1a4f73a1c5f2c2e172a9#subdirectory=bindings/torch
+torch==1.7.1+cu110
+torchaudio==0.7.2
+torchvision==0.8.2+cu110
+tqdm==4.66.1
+wandb==0.16.0
+git+https://github.com/tfy14esa/evaluate_3d_reconstruction_lib.git
