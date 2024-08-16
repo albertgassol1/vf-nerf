@@ -7,17 +7,9 @@
 
 This repository contains the implementation of VF-NeRF: a neural volume rendering method that makes use of Vector Fields to represent indoor scenes. We learn the representation from multi-view posed images and their monocular depth maps.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## Installation
 
-Clone project and pull LFS files (```git lfs pull```)
+Clone project and pull LFS files (```git lfs pull```).
 
 ### Environment
 
@@ -36,7 +28,14 @@ python3 -m venv vf_nerf
 pip install -r requirements.txt
 ```
 
+## Data
 
+ScanNet: see [Manhattan-SDF](https://github.com/zju3dv/manhattan_sdf) repository.
+
+Replica: see [NICE-SMAL](https://github.com/cvg/nice-slam/blob/master/scripts/download_replica.sh) script.
+
+
+## Code structure
 ### Dataset loaders
 The dataset loaders are located in [./datasets/normal_datasets](./datasets/normal_datasets). The folder contains a base class and two dataloaders for the replica and the scannet datasets. 
 
