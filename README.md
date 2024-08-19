@@ -1,5 +1,21 @@
-# VF-NeRF: Learning Neural Vector Fields for Indoor Scene Reconstruction
+<p align="center">
 
+  <h1 align="center">VF-NeRF: Learning Neural Vector Fields for Indoor Scene Reconstruction</h1>
+  <p align="center">
+    <a href="https://albertgassol1.github.io/">Albert Gassol Puigjaner</a>
+    ·
+    <a href="https://scholar.google.com/citations?user=jNPBzzQAAAAJ&hl=it">Edoardo Mello Rella</a>
+    ·
+    <a href="https://eriksandstroem.github.io/">Erik Sandstöm</a>
+    ·
+    <a href="https://ajadchhatkuli.github.io/">Ajad Chhatkuli</a>
+    ·
+    <a href="https://insait.ai/prof-luc-van-gool/">Luc Van Gool</a>
+
+  </p>
+  <h3 align="center"><a href="https://arxiv.org/abs/2408.08766">Paper</a></h3>
+  <div align="center"></div>
+</p>
 
 <img title="VF-NeRF" alt="Alt text" src="./assets/vf_nerf.png">
 
