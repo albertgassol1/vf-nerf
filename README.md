@@ -48,40 +48,37 @@ pip install -r requirements.txt
 
 ScanNet: see [Manhattan-SDF](https://github.com/zju3dv/manhattan_sdf) repository.
 
-Replica: see [NICE-SMAL](https://github.com/cvg/nice-slam/blob/master/scripts/download_replica.sh) script.
+Replica: see [NICE-SLAM](https://github.com/cvg/nice-slam/blob/master/scripts/download_replica.sh) script.
 
 
 ## Code structure
 ### Dataset loaders
-The dataset loaders are located in [./datasets/normal_datasets](./datasets/normal_datasets). The folder contains a base class and two dataloaders for the replica and the scannet datasets. 
+The dataset loaders are located in [./datasets/normal_datasets](./datasets/normal_datasets). The folder contains a base class and two data loaders for the replica and the ScanNet datasets. 
 
 ### Networks
-
-The models are located in [./models/vector_field](./models/vector_field). Bith the vector field network and the rendering network are located there.
+The models are located in [./models/vector_field](./models/vector_field). Both the vector field network and the rendering network are located there.
 
 ### Losses
-The losses are located in [./models/losses](./models/losses). The file [vf_loss.py](./models/losses/vf_loss.py) contains the losses used by our method.
+[./models/losses/vf_loss.py](./models/losses/vf_loss.py) contains the losses used by our method.
 
 ### Density
 The density functions are located in [./models/helpers/density_functions.py](./models/helpers/density_functions.py). One can add a new density here, all of them inherit from the base class. Parameters can be added (they should also be added in the config implementation).
 
 ### Config
-
-The config dataclasses are located in [./config_parser/vf_nerf_config.py](./config_parser/vf_nerf_config.py) and [./config_parser/joint_opt_config.py](config_parser/joint_opt_config.py). This configs manage the parameters set in the [config files](./confs).
+The config data classes are located in [./config_parser/vf_nerf_config.py](./config_parser/vf_nerf_config.py). This confis manages the parameters set in the [config files](./confs).
 
 ### NeRF
 The main model for VF-NeRF is located in [./models/nerf/vector_field_nerf.py](./models/nerf/vector_field_nerf.py). It contains all the important elements of the model (networks, density, annealing, optimizer, sampler). The main function is render, and it contains the inference of the network to render the color and normals of a batch of rays. If one wants to change the density for example, it needs to call the constructor of the new density in this file.
 
 ### Trainers
-The main trainer for the whole optimization is [./train/vector_field_nerf_train.py](./train/vector_field_nerf_train.py). The loss, forward and backward part are called in this files.
+The main trainer for the whole optimization is [./train/vector_field_nerf_train.py](./train/vector_field_nerf_train.py). The loss, forward and backward parts are called in this file.
 
 ## Training
-To train a model from scratch, first one should download the datasets and put them under ```./data```. Then, adjust the [config files](./confs) as wanted. Make sure to st the correct dataset name (replica or scannet) and the name of the directory (Replica or ScanNet) in the dataset config in [./confs/vf_nerf.conf](./confs/vf_nerf.conf). Additionally, set your desired loss weights.
+To train a model from scratch, first one should download the datasets and put them under ```./data```. Then, adjust the [config files](./confs) as wanted. Make sure to set the correct dataset name (replica or scannet) and the name of the directory (Replica or ScanNet) in the dataset config in [./confs/vf_nerf.conf](./confs/vf_nerf.conf). Additionally, set your desired loss weights.
 
 Then run:
 
 ```
-# Euler append # isort:skip
 python  --scene [scene_name] --expname [experiment_name]
 ```
 Options:
@@ -92,7 +89,7 @@ Options:
 --expname: eihter replica or scannet.
 --timestamp: if you want to resume an experiment, set the timestamp of the experiment you want to resume here.
 --checkpoint: if resuming, define from which checkpoint, set to latest for the last checkpoint.
---offline: set this flag to disable wandb (recommended in euler).
+--offline: set this flag to disable wandb.
 --data_root_dir: path to data dir, by default it is set to ./data
 ```
 
@@ -114,7 +111,7 @@ Options:
 --eval_folder: Folder where the evaluation is saved. Default is evals_vf_nerf.
 --chunk_size: chunk size for inferencing the model, default is 1024 rays.
 --distance_thresh: threshold for precision, recall and F-score, default is 0.05.
---num_quadrants: Number of quadrant for the MC, default is 8.
+--num_quadrants: Number of quadrants for the MC, default is 8.
 --data_root_dir: path to data dir, by default it is set to ./data
 ```
 
