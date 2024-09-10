@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ## Data
 
-ScanNet: see [Manhattan-SDF](https://github.com/zju3dv/manhattan_sdf) repository.
+ScanNet: download some scenes [here](https://drive.google.com/file/d/1hQZw2jBLpPOqxq6-OP4CZed0KT4cltKl/view?usp=drive_link).
 
 Replica: see [NICE-SLAM](https://github.com/cvg/nice-slam/blob/master/scripts/download_replica.sh) script.
 
