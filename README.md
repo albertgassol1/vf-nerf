@@ -49,6 +49,7 @@ pip install -r requirements.txt
 ScanNet: download some scenes [here](https://drive.google.com/file/d/1hQZw2jBLpPOqxq6-OP4CZed0KT4cltKl/view?usp=drive_link).
 
 Replica: see [NICE-SLAM](https://github.com/cvg/nice-slam/blob/master/scripts/download_replica.sh) script.
+After downloading the dataset, the pre-trained VF network models for each scene must be downloaded. These models are simply trained to point toward the center of the scene. Since each scene has its origin in a different position, this initialization depends on the scene. Download the pre-trained networks [here](https://drive.google.com/file/d/1pgkMmIQT5YvAFsqY387LKAadVxVRdGaP/view?usp=sharing). Uncompress the files and place each one of them in ```./data/Replica/<scene>```, i.e. for ```office0``` it would be ```./data/Replica/office0/office0.pth```.
 
 
 ## Code structure
